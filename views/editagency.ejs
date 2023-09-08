@@ -1,0 +1,39 @@
+<%- include('header') -%>
+
+<div class="container">
+    <div class="row">
+        <h1>Edit agency</h1>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-5">
+            <form class="medium" method="POST">
+                <input type="hidden" name="id" value="<%= agency._id %>"/>
+                <div class="form-group">
+                    <label for="agencyName">Agency Name</label>
+                    <input type="text" class="form-control" id="name" name="name"
+                           value="<%= agency.name %>">
+                </div>
+                <div class="form-group">
+                    <label for="headquarter">Headquarter</label>
+                    <input type="text" class="form-control" id="headquarter" name="headquarters"
+                           value="<%= agency.headquarters %>">
+                </div>
+                <div class="form-outline">
+                    <label class="form-label" for="coworkers">Number of coworkers</label>
+                    <input min="1" max="10000" type="number" id="numberOfCoworkers" name="numberOfCoworkers" class="form-controll"
+                           value="<%= agency.numberOfCoworkers %>">
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-6 text-center">
+                        <input type="submit" class="btn btn-primary btn-lg" href="/agency" value="Save modification"/>
+                    </div>
+                    <div class="col-6 text-center">
+                        <a class="btn btn-danger btn-lg" href="/agency">Cancel modification</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>      
+
+<%- include('footer') -%>

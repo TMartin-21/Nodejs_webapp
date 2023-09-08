@@ -1,0 +1,44 @@
+<%- include('header') -%>
+
+<div class="container">
+    <div class="row">
+        <h1>Edit hero</h1>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-5">
+            <form class="medium" method="POST">
+                <input type="hidden" name="id" value="<%= hero._id %>"/>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name"
+                           value="<%= hero.name %>">
+                </div>
+                <div class="form-group">
+                    <label for="superheroName">Superhero name</label>
+                    <input type="text" class="form-control" id="superheroName" name="superheroName"
+                           value="<%= hero.superheroName %>">
+                </div>
+                <div class="form-group">
+                    <label for="ability">Ability</label>
+                    <input type="text" class="form-control" id="ability" name="ability"
+                           value="<%= hero.ability %>">
+                </div>
+                <div class="form-outline">
+                    <label class="form-label" for="age">Age</label>
+                    <input min="1" max="10000" type="number" id="age" name="age" class="form-controll"
+                           value="<%= hero.age %>">
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-6 text-center">
+                        <input type="submit" class="btn btn-primary btn-lg" href="/heroes/<%= agency._id %>" value="Save modification"/>
+                    </div>
+                    <div class="col-6 text-center">
+                        <a class="btn btn-danger btn-lg" href="/heroes/<%= agency._id %>">Cancel modification</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include('footer') -%>

@@ -1,0 +1,48 @@
+body {
+    background: 
+    linear-gradient(-45deg, #464646 10%,       
+                            black 50%,
+                            #464646 10%);
+}
+
+body h1 {
+    text-align: center;
+    color: white;
+    padding-top: 5%;
+}
+
+.table-custom-first td:first-child{
+    border: none; 
+    background: none;
+}
+
+.table-custom-last td:last-child{
+    border: none; 
+    background: none;
+}
+
+.table-custom-first th:first-child{
+    border: none; 
+    background: none;
+}
+
+.table-custom-last th:last-child{
+    border: none; 
+    background: none;
+}
+
+body div.title {
+    text-align: left;
+    color: white;
+    padding-top: 5%;
+    font-size: 60;
+    font-weight: 500;
+    padding-bottom: 2%;
+}
+
+.medium > div {
+    font-size: large;
+    font-weight: 500;
+    color: white;
+    padding-top: 2rem;
+}

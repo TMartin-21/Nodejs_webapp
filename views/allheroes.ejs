@@ -1,0 +1,48 @@
+<%- include('header') -%>
+<%- include('navbar') -%>
+
+<div class="container">
+    <div class="row">
+        <div class="col-2 text-left">
+            <div class="title">All Heroes</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <table class="table table-light table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Superhero Name</th>
+                        <th scope="col">Ability</th>
+                        <th scope="col">Agency</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% allheroes.forEach(function(hero){ %>
+                        <tr>
+                            <td>
+                                <%= hero.name %>
+                            </td>
+                            <td>
+                                <%= hero.age %>
+                            </td>
+                            <td>
+                                <%= hero.superheroName %>
+                            </td>
+                            <td>
+                                <%= hero.ability %>
+                            </td>
+                            <td>
+                                <%= hero.agency %>
+                            </td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+   
+<%- include('footer') -%>
